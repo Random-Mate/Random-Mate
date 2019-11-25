@@ -6,7 +6,7 @@ const app = express()
 // DB, middlewares, locals & debug
 require('./configs/mongoose.config')
 require('./configs/middlewares.config')(app)
-require('./configs/preprocessor.config')(app) c
+require('./configs/preprocessor.config')(app) 
 require('./configs/debug.config')
 
 // Base URL's
