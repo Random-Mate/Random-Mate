@@ -3,16 +3,20 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
  
-username:String	,
+name:String,
 age:	Number	,
-email:	email	,
+email:	String	,
 password:String	,
-photo	:file	,
-  plans: { type: Schema.Types.ObjectId, ref: 'Plan' }	,
-descripton:	String	,
-activities:	[],
-  comments: { type: Schema.Types.ObjectId, ref: 'Comment' }	,
-  rating: { type: Schema.Types.ObjectId, ref: 'Comment' }
+imgName: String,
+imgPath: String,
+plans: [{ type: Schema.Types.ObjectId, ref: 'Plan' }]	,
+description:	String	,
+activities:	{
+  type:String,
+  enum:['bar','club','cinema','coffe shop','play football','play basketball','play tennis' ,'play padel']
+},
+comments:{type: Schema.Types.ObjectId, ref: 'Comment' }	,
+             
 }, {
   timestamps: {
     createdAt: 'created_at',

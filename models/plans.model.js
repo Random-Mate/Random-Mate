@@ -3,8 +3,14 @@ const Schema = mongoose.Schema
 
 // Aquí el esquema
 const planSchema = new Schema({
-  name: { type: Schema.Types.ObjectId, ref: 'User' },
-  activities: { type: Schema.Types.ObjectId, ref: 'User' }
+  title:String,
+  author: { type: Schema.Types.ObjectId, ref: 'User' },
+  activity: { type: Schema.Types.ObjectId, ref: 'User' },
+  atending:[],
+  date:Date,
+  houre:Number,
+  description:String,
+  location:String
 
 },
   {

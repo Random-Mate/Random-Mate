@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Profile</h1>
+
+  <div class="row">
+    <div class="col-md-8">
+      <img src="{{photo}}" alt="the user photograf" style="width: 100%">
+      <h2>{{name}}</h2>
+      <h3>{{age}}</h3>
+      <p>{{description}}</p><br>
+      <a href="/profile/edit">Edite Profile</a>
+      <ul>
+        {{#each comment}}
+          <li>{{this.name}}
+            {{this.rating}}/5
+            {{this.comentary}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{else}}
+    <p>no image could be found</p>
+    
+  </div>
+</div>
