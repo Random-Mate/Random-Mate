@@ -3,13 +3,16 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
 
-  username: String,
+
+  name:String,
   age: Number,
-  email: email,
+  email: String,
   password: String,
-  photo: file,
-  plans: { type: Schema.Types.ObjectId, ref: 'Plan' },
-  descripton: String,
+  photo: {
+    type: File,
+    default: ''},
+  plans: [{ type: Schema.Types.ObjectId, ref: 'Plan' }],
+  description: String,
   activities: [],
   comments: { type: Schema.Types.ObjectId, ref: 'Comment' },
   rating: { type: Schema.Types.ObjectId, ref: 'Comment' }
