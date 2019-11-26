@@ -1,27 +1,27 @@
-const passport      = require('passport');
+const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const User          = require('../models/User.model');
-const bcrypt        = require('bcrypt');
+const User = require('../models/User.model');
+const bcrypt = require('bcrypt');
 
 passport.use(new LocalStrategy({
-    usernameField: 'username',
-    passwordField: 'password'
-  }, 
+  usernameField: 'email',
+  passwordField: 'password'
+},
   (username, password, done) => {
-    User.findOne({ username })
-    .then(foundUser => {
-      if (!foundUser) {
-        done(null, false, { message: 'Incorrect username' });
-        return;
-      }
+    User.findOne({ email: username })
+      .then(foundUser => {
+        if (!foundUser) {
+          done(null, false, { message: 'Incorrect username' });
+          return;
+        }
 
-      if (!bcrypt.compareSync(password, foundUser.password)) {
-        done(null, false, { message: 'Incorrect password' });
-        return;
-      }
+        if (!bcrypt.compareSync(password, foundUser.password)) {
+          done(null, false, { message: 'Incorrect password' });
+          return;
+        }
 
-      done(null, foundUser);
-    })
-    .catch(err => done(err));
+        done(null, foundUser);
+      })
+      .catch(err => done(err));
   }
 ));

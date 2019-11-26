@@ -4,10 +4,11 @@ const router = express.Router()
 const Plans = require('../models/plans.model')
 
 
-router.get('/plans', (req, res) => res.render('routes/plans.routes'))
+router.get('/', (req, res) => res.render('plans/plans'))
 router.post('/plans', (req, res) => {
-  const { name, activities } = req.body
-  Plans.create({ name, activities})
+  const { title, author , activity , atending , date , description , location } = req.body
+  Plans.create({ title , author , activity , atending , date , description , location})
     .then(newPlan)
     .catch(err => console.log(err))
 })
+module.exports = router;

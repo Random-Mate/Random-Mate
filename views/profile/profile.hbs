@@ -7,7 +7,7 @@
       <h2>{{name}}</h2>
       <h3>{{age}}</h3>
       <p>{{description}}</p><br>
-      <a href="/profile/edit">Edite Profile</a>
+      <a href="/profile/edit">Edit Profile</a>
       <ul>
         {{#each comment}}
           <li>{{this.name}}
@@ -15,10 +15,10 @@
             {{this.comentary}}
           </li>
         {{/each}}
-      </ul>
+      </ul> 
     </div>
-    {{else}}
-    <p>no image could be found</p>
+    {{!-- {{else}}
+    <p>no image could be found</p> --}}
     
   </div>
 </div>
