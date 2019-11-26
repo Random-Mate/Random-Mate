@@ -3,13 +3,16 @@ const Schema = mongoose.Schema
 
 // Aquí el esquema
 const planSchema = new Schema({
-  title: String,
-  author: { type: Schema.Types.ObjectId, ref: 'User' },
-  activity: { type: Schema.Types.ObjectId, ref: 'User' },
-  atending: [],
-  date: Date,
-  description: String,
-  location: String
+  title:String,
+  details: { type: Schema.Types.ObjectId, ref: 'User' },
+  atending:[{ type: Schema.Types.ObjectId, ref: 'User' }],
+  plan:{
+    type:String,
+    enum: ['bar', 'club', 'cinema', 'coffe shop', 'play football', 'play basketball', 'play tennis', 'play padel']
+  },
+  date:Date,
+  description:String,
+  location:String
 
 },
   {

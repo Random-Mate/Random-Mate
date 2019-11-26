@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div class="row">
+
+
+    <div class="col-md-6">
+
+      <form action="/plans/newPlan" method="post">
+        <h1>What do you want to do?</h1>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input name="title" type="text" class="form-control" id="title">
+        </div>
+        <div class="form-group">
+        <select name="plan" class="form-control" id="plan">
+          <option value='bar'>Go to a Bar</option>
+          <option value='club'>Go to a Club</option>
+          <option value='cinema'>Go to the Movies</option>
+          <option value='coffee shop'>Go to a Cofee Shop</option>
+          <option value='football court'>Play a match of Football</option>
+          <option value='basketball court'>Play a match of Basketball</option>
+          <option value='tennis court'>Play a match of Tennis</option>
+          <option value='padel court'>Play a match of Padel</option>
+        </select>
+        </div>
+        <div class="form-group">
+          <label for="date">When?</label>
+          <input name="date" type="date" class="form-control" id="date">
+        </div>
+        <div class="form-group">
+          <label for="description">What do you have plane?</label>
+          <input name="description" type="text" class="form-control" id="description">
+        </div>
+      <div class="form-group">
+        <label for="location">Where do you want to meet?</label>
+        <input name="location" type="text" class="form-control" id="location">
+      </div>
+            {{#if message }}
+            <div class="error-message">{{ message }}</div>
+            {{/if}}
+        <button type="submit" class="btn btn-dark">That's a Plan!!</button>
+        <a href="/" class="btn btn-dark">Volver</a>
+
+      </form>
+    </div>
+
+  </div>
+</div>
