@@ -1,10 +1,10 @@
 const express = require('express');
-const router  = express.Router();
+const router = express.Router();
 
 /* GET home page */
 router.get('/', (req, res, next) => {
   let isLoggedOut = req.user === undefined;
-  res.render('index', {isLoggedOut});
+  res.render('index', { isLoggedOut, userID: req.user._id});
 });
 
 module.exports = router;

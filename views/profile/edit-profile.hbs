@@ -9,8 +9,8 @@
 
     <div class="col-md-6">
 
-      <form action="profile/edit?id={{user._id}}" method="POST" id="form-container">
-        {{#with user}}
+      <form action="/profile/edit" method="POST" id="form-container">
+        {{#with prof}}
         <div class='form-group'>
           <label for='input2'>Profile picture</label>
           <input name='imgPath' type='imgPath' id='input2'>
@@ -18,22 +18,21 @@
 
         <div class="form-group">
           <label for="name-input">Name</label>
-          <input name="name" type="text" class="form-control" id="name-input" value="{{user.name}}">
+          <input name="name" type="text" class="form-control" id="name-input" value="{{name}}">
         </div>
         <div class="form-group">
           <label for="age-input">Age</label>
-          <input name="age" type="number" class="form-control" id="age-input" value="{{user.age}}">
+          <input name="age" type="number" class="form-control" id="age-input" value="{{age}}">
         </div>
         <div class="form-group">
           <label for="description-input">Description</label>
-          <input name="description" type="text" class="form-control" id="description-input"
-            value="{{user.description}}">
+          <input name="description" type="text" class="form-control" id="description-input" value="{{description}}">
         </div>
 
         {{/with}}
         {{!-- {{#each users}}
         <option value="{{_id}}">{{name}}</option>
-        {{/each}} --}}
+        {{/each}}  --}}
 
         <button type="submit" class="btn btn-dark">Guardar edición</button>
         <a href="/profile" class="btn btn-dark">Volver</a>

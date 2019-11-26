@@ -11,7 +11,6 @@ router.post('/plans', (req, res) => {
     .then(newPlan)
     .catch(err => console.log(err))
 })
-module.exports = router;
 router.get('/newPlan', (req, res) => res.render('plans/createPlan'))
 router.post('/newPlan', (req, res) => {
   const { title,plan,date,description,location } = req.body
