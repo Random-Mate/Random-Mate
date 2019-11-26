@@ -4,9 +4,9 @@ const express = require('express');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const path = require('path');
-
+const flash = require("connect-flash");
 module.exports = app => {
-
+  app.use(flash())
   app.use(logger('dev'));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: false }));
