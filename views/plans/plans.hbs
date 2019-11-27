@@ -2,20 +2,22 @@
   <a href="/" class="btn btn-dark">Volver</a>
   <a href="/plans/newPlan" class="btn btn-dark">Crear plan</a>
   <h5>Planes</h5>
-
+<div class="row">
  {{#each plans}}
-
+<div class="col-md-6">
   <h1 style="font-weight: 100">{{this.title}}</h1>
   <p><strong>fecha</strong>: {{this.date}}</p>
   <p><strong>Planes</strong>: {{this.plan}}</p>
   <p><strong>¿Cual es el plan?</strong>: {{this.title}}</p>
   <p><strong>Detalles</strong>: {{this.details}}</p>
   <p><strong>quien se une</strong>: {{this.atending}}</p>
-  <p><strong>location</strong>: {{this.location}}</p>
   <p><strong>descripción del plan</strong>: {{this.description}}</p>
+  <p><strong>location</strong>: {{this.location}}</p>
+  
+</div>
 
   <hr>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5QrzQLJtAltgspt1-ri6B04SFtB93v3s&callback=initMap"></script>
   {{/each}}
 
+</div>
 </div>
