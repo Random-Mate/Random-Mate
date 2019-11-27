@@ -1,0 +1,8 @@
+<div>
+  <form action="/plans/map" method="post"></form>
+<input name="location" type="text" class="form-control" id="address" value="{{map.location}}">
+<input id="submit" type="button" value="Search in map">
+</div>
+<figure id="map" class="addMap"></figure>
+<script src="/javascripts/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5QrzQLJtAltgspt1-ri6B04SFtB93v3s&callback=initMap"></script>

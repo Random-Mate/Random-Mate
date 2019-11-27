@@ -43,15 +43,15 @@ router.post('/join',(req,res)=>{
         .catch(err => console.log(err))
 
 })
-// router.get('/plans/:id', (req, res) => {
-//   const planId = req.params.id
-//   Plans.findById(planId)
-//     .then(plan => res.render('plans/myPlan', {
-//       plans
-//     }))
-//     .catch(err => console.log("Error consultando la BBDD: ", err))
+router.get('/details/:id', (req, res) => {
+  const planId = req.params.id
+  Plans.findById(planId)
+    .then(plan => res.render('plans/map', {
+      map:plan
+    }))
+    .catch(err => console.log("Error consultando la BBDD: ", err))
     
-// })
+})
   
 
 
