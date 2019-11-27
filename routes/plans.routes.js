@@ -6,8 +6,10 @@ const Plans = require('../models/plans.model')
 
 router.get('/:id', (req, res) => {
   const idUser = req.params.id
-  Plans.find()
-    .then(allPlans =>res.render('plans/plans',{plans:allPlans,user:idUser}))
+    let isLoggedOut = req.user === undefined;
+    Plans.find()
+  .then(allPlans =>res.render('plans/plans', { isLoggedOut, userID: req.user._id, user: req.user,plans:allPlans,user:idUser }));
+    
 })
 // router.post('/plans', (req, res) => {
 //   const { title, author , activity , atending , date , description , location } = req.body
@@ -15,7 +17,11 @@ router.get('/:id', (req, res) => {
 //     .then(newPlan)
 //     .catch(err => console.log(err))
 // })
-router.get('/newPlan/:id', (req, res) => res.render('plans/createPlan'))
+router.get('/newPlan/:id', (req, res) => {
+  
+  let isLoggedOut = req.user === undefined;
+  res.render('plans/createPlan', { isLoggedOut, userID: req.user._id, user: req.user})}
+  )
 
 router.post('/newPlan/', (req, res) => {
   const author= req.params.id
@@ -34,7 +40,11 @@ router.post('/newPlan/', (req, res) => {
     .catch(err => console.log(err))
 })
 
-router.get('/join/:id', (req,res)=>res.render('plans/joinPlan'))
+router.get('/join/:id', (req,res)=>{
+  
+  let isLoggedOut = req.user === undefined;
+  res.render('plans/joinPlan', { isLoggedOut, userID: req.user._id, user: req.user})}
+  )
 
 router.post('/join/:id',(req,res)=>{
     const plan = req.body
@@ -45,10 +55,10 @@ router.post('/join/:id',(req,res)=>{
 })
 router.get('/details/:id', (req, res) => {
   const planId = req.params.id
+
+  let isLoggedOut = req.user === undefined;
   Plans.findById(planId)
-    .then(plan => res.render('plans/map', {
-      map:plan
-    }))
+    .then(plan => res.render('plans/map', {map:plan,isLoggedOut, userID: req.user._id, user: req.user}))
     .catch(err => console.log("Error consultando la BBDD: ", err))
     
 })
@@ -57,8 +67,9 @@ router.get('/details/:id', (req, res) => {
 
 router.get('/myPlans/:id', (req, res) => {
   const planId = req.params.id
+  let isLoggedOut = req.user === undefined;
   Plans.find({ atending : planId })
-    .then(plans => res.render('plans/myPlan', { plan: plans }))
+    .then(plans => res.render('plans/myPlan', { plan: plans,map:plan,isLoggedOut, userID: req.user._id, user: req.user }))
     .catch(err => console.log('error!!', err))
 })
   module.exports = router;
