@@ -7,6 +7,15 @@ const uploadCloud = require('../configs/cloudinary.config');
 
 // Aquí los endpoints
 
+// router.get('/session/:id', (req, res) => {
+//   const profileId = req.params.id
+//   Profile.findById(profileId)
+//     .then(profile => res.render('profile/session', {
+//       profile
+//     }))
+//     .catch(err => console.log("Error consultando la BBDD: ", err))
+// })
+
 router.get('/:id', (req, res) => {
   const profileId = req.params.id
   Profile.findById(profileId)

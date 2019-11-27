@@ -4,9 +4,10 @@ const router = express.Router()
 const Plans = require('../models/plans.model')
 
 
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
+  const idUser = req.params.id
   Plans.find()
-    .then(allPlans =>res.render('plans/plans',{plans:allPlans}))
+    .then(allPlans =>res.render('plans/plans',{plans:allPlans,user:idUser}))
 })
 // router.post('/plans', (req, res) => {
 //   const { title, author , activity , atending , date , description , location } = req.body
@@ -14,9 +15,12 @@ router.get('/', (req, res) => {
 //     .then(newPlan)
 //     .catch(err => console.log(err))
 // })
-router.get('/newPlan', (req, res) => res.render('plans/createPlan'))
+router.get('/newPlan/:id', (req, res) => res.render('plans/createPlan'))
+
 router.post('/newPlan', (req, res) => {
-  const { title,plan,date,description,location } = req.body
+
+  const { title, plan, date, description, location } = req.body
+
 
   if (!title|| !plan || !description || !location||!date) {
     res.render("plans/createPlan", {
@@ -24,6 +28,7 @@ router.post('/newPlan', (req, res) => {
     });
     return;
   }
+
   Plans.create({title,plan,date,description,location})
     .then(x => res.redirect('/'))
     .catch(err => console.log(err))
@@ -38,4 +43,22 @@ router.post('/join',(req,res)=>{
         .catch(err => console.log(err))
 
 })
-module.exports = router;
+// router.get('/plans/:id', (req, res) => {
+//   const planId = req.params.id
+//   Plans.findById(planId)
+//     .then(plan => res.render('plans/myPlan', {
+//       plans
+//     }))
+//     .catch(err => console.log("Error consultando la BBDD: ", err))
+    
+// })
+  
+
+
+router.get('/myPlans/:id', (req, res) => {
+  const planId = req.params.id
+  Plans.find({ atending : planId })
+    .then(plans => res.render('plans/myPlan', { plan: plans }))
+    .catch(err => console.log('error!!', err))
+})
+  module.exports = router;

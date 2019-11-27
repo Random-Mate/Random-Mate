@@ -1,9 +1,10 @@
 <div class="container">
   <h1>Profile</h1>
+      {{#with profile}}
+  <a href="/myPlans/{{_id}}/" class="btn btn-dark">Mis Planes</a>
 
   <div class="row">
     <div class="col-md-8">
-      {{#with profile}}
 
       <img src="{{imgPath}}" alt="{{imgName}}" style="width: 100%">
       <h2>{{name}}</h2>

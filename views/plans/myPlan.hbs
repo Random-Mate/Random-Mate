@@ -1,13 +1,13 @@
 <div class="container plans-index">
   <a href="/" class="btn btn-dark">Volver</a>
-  <a href="/plans/newPlan/{{user}}" class="btn btn-dark">Crear plan</a>
+  
 
- {{#each plans}}
+  {{#each plan}}
 
-  <h1 style="font-weight: 100">{{this.name}}</h1>
+  <h1 style="font-weight: 100">{{this.title}}</h1>
   <h5>Planes</h5>
   <p><strong>fecha</strong>: {{this.date}}</p>
-  <p><strong>Planes</strong>: {{this.enum}}</p>
+  <p><strong>Planes</strong>: {{this.plan}}</p>
   <p><strong>¿Cual es el plan?</strong>: {{this.title}}</p>
   <p><strong>Detalles</strong>: {{this.details}}</p>
   <p><strong>quien se une</strong>: {{this.atending}}</p>
@@ -15,7 +15,7 @@
   <p><strong>descripción del plan</strong>: {{this.description}}</p>
   <hr>
 
-  <a href="/plans/join" class="btn btn-dark">Unirse al plan</a>
+  
   {{/each}}
 
 </div>
