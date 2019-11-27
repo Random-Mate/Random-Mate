@@ -32,8 +32,9 @@
           <input name="description" type="text" class="form-control" id="description">
         </div>
       <div class="form-group">
-        <label for="location">Where do you want to meet?</label>
-        <input name="location" type="text" class="form-control" id="location">
+        <label for="address">Where do you want to meet?</label>
+        <input name="location" type="text" class="form-control" id="address">
+        <input id="submit" type="button" value="Geocode">
       </div>
             {{#if message }}
             <div class="error-message">{{ message }}</div>
@@ -46,6 +47,7 @@
     <div class="col-md-6">
 
         <figure id="map"></figure>
+        
 
     </div>
 
