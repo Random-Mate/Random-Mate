@@ -38,4 +38,29 @@ router.post('/join',(req,res)=>{
         .catch(err => console.log(err))
 
 })
+
+router.get('/api', (req, res, next) => {
+  Plans.find()
+    .then(allPlans => res.status(200).json({
+      plans: allPlans
+    }))
+    .catch(err => next(err))
+});
+
+
+router.get('/api/:id', (req, res, next) => {
+  let plansId = req.params.id;
+  Plans.findById(plansId)
+    .then(idPlans => res.status(200).json({
+      place: idPlans
+    }))
+});
+router.get('/details/:id', (req, res) => {
+  const plansId = req.params.id
+  Plans.findById(plansId)
+    .then(plans => res.render('places/placeDetails', {
+      places: plans
+    }))
+    .catch(err => console.log("Error consultando la BBDD: ", err))
+});
 module.exports = router;

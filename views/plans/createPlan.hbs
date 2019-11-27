@@ -34,7 +34,7 @@
       <div class="form-group">
         <label for="address">Where do you want to meet?</label>
         <input name="location" type="text" class="form-control" id="address">
-        <input id="submit" type="button" value="Geocode">
+        <input id="submit" type="button" value="Search in map">
       </div>
             {{#if message }}
             <div class="error-message">{{ message }}</div>
@@ -46,13 +46,12 @@
     </div>
     <div class="col-md-6">
 
-        <figure id="map"></figure>
+        <figure id="map" class='addMap'></figure>
         
 
     </div>
 
   </div>
 </div>
-<script src="/javascripts/location.js"></script>
 <script src="/javascripts/main.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5QrzQLJtAltgspt1-ri6B04SFtB93v3s&callback=initMap"></script>
