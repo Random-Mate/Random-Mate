@@ -4,13 +4,16 @@ const router = express.Router()
 const Plans = require('../models/plans.model')
 
 
-router.get('/', (req, res) => res.render('plans/plans'))
-router.post('/plans', (req, res) => {
-  const { title, author , activity , atending , date , description , location } = req.body
-  Plans.create({ title , author , activity , atending , date , description , location})
-    .then(newPlan)
-    .catch(err => console.log(err))
+router.get('/', (req, res) => {
+  Plans.find()
+    .then(allPlans =>res.render('plans/plans',{plans:allPlans}))
 })
+// router.post('/plans', (req, res) => {
+//   const { title, author , activity , atending , date , description , location } = req.body
+//   Plans.create({ title , author , activity , atending , date , description , location})
+//     .then(newPlan)
+//     .catch(err => console.log(err))
+// })
 router.get('/newPlan', (req, res) => res.render('plans/createPlan'))
 router.post('/newPlan', (req, res) => {
   const { title,plan,date,description,location } = req.body

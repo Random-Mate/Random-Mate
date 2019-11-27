@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const Profile = require('../models/User.model')
+const User = require('../models/User.model')
+const multer = require('multer');
+const uploadCloud = require('../configs/cloudinary.config');
 
 // Aquí los endpoints
 
@@ -19,9 +22,11 @@ router.get('/edit/:id', (req, res) => {
     .catch(err => console.log('error!!', err))
 
 })
-router.post('/edit', (req, res) => {
+router.post('/edit', uploadCloud.single('imgPath'), (req, res) => {
+  const { name, age, description} = req.body
+  const imgPath = req.file.url
+  const imgName = req.file.originalname
 
-  const { name, age, description, imgPath, imgName } = req.body
   const profileId = req.params.profileId
   console.log(req.user._id)
   Profile.findByIdAndUpdate(req.user._id, { name, age, description, imgPath, imgName }, { new: true })

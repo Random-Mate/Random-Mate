@@ -9,11 +9,11 @@
 
     <div class="col-md-6">
 
-      <form action="/profile/edit" method="POST" id="form-container">
+      <form action="/profile/edit" method="POST" id="form-container" enctype="multipart/form-data">
         {{#with prof}}
         <div class='form-group'>
           <label for='input2'>Profile picture</label>
-          <input name='imgPath' type='imgPath' id='input2'>
+          <input name='imgPath' type='file' id='input2'>
         </div>
 
         <div class="form-group">
