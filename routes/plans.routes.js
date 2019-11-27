@@ -17,7 +17,7 @@ router.get('/:id', (req, res) => {
 // })
 router.get('/newPlan/:id', (req, res) => res.render('plans/createPlan'))
 
-router.post('/newPlan/:id', (req, res) => {
+router.post('/newPlan/', (req, res) => {
   const author= req.params.id
   const { title, plan, date, description, location } = req.body
   console.log(author)
@@ -43,15 +43,15 @@ router.post('/join/:id',(req,res)=>{
         .catch(err => console.log(err))
 
 })
-// router.get('/plans/:id', (req, res) => {
-//   const planId = req.params.id
-//   Plans.findById(planId)
-//     .then(plan => res.render('plans/myPlan', {
-//       plans
-//     }))
-//     .catch(err => console.log("Error consultando la BBDD: ", err))
+router.get('/details/:id', (req, res) => {
+  const planId = req.params.id
+  Plans.findById(planId)
+    .then(plan => res.render('plans/map', {
+      map:plan
+    }))
+    .catch(err => console.log("Error consultando la BBDD: ", err))
     
-// })
+})
   
 
 

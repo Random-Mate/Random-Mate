@@ -17,6 +17,7 @@ const uploadCloud = require('../configs/cloudinary.config');
 // })
 
 router.get('/:id', (req, res) => {
+  console.log("holaaaaa")
   const profileId = req.params.id
   Profile.findById(profileId)
     .then(profile => res.render('profile/profile', {
@@ -32,7 +33,7 @@ router.get('/edit/:id', (req, res) => {
 
 })
 router.post('/edit', uploadCloud.single('imgPath'), (req, res) => {
-  const { name, age, description} = req.body
+  const { name, age, description } = req.body
   const imgPath = req.file.url
   const imgName = req.file.originalname
 
