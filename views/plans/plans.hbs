@@ -1,6 +1,6 @@
 <div class="container plans-index">
   <a href="/" class="btn btn-dark">Volver</a>
-  <a href="/plans/newPlan" class="btn btn-dark">Crear plan</a>
+  <a href="/plans/newPlan/{{user}}" class="btn btn-dark">Crear plan</a>
   <h5>Planes</h5>
 <div class="row">
  {{#each plans}}
@@ -14,9 +14,9 @@
   <p><strong>descripción del plan</strong>: {{this.description}}</p>
   <p><strong>location</strong>: {{this.location}}</p>
   
+  <a href="/plans/join/{{user}}" class="btn btn-dark">Unirse al plan</a>
 </div>
 
-  <a href="/plans/join" class="btn btn-dark">Unirse al plan</a>
   {{/each}}
 
 </div>
