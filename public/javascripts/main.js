@@ -54,25 +54,27 @@
 //   getAllPlacesFromTheAPI(myMap)
 // }
 
-function initMap() {
-  navigator.geolocation.getCurrentPosition((position) => {
-  let map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude
-    }
-  });
-  let geocoder = new google.maps.Geocoder();
 
-  document.getElementById('submit').addEventListener('click', function () {
+  document.getElementById('submit').addEventListener('click', function initMap() {
+  
+  navigator.geolocation.getCurrentPosition((position) => {
+    let map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      }
+    });
+    let geocoder = new google.maps.Geocoder();
+    
     geocodeAddress(geocoder, map);
-  });
-})
-}
+  })
+});
+
 
 function geocodeAddress(geocoder, resultsMap) {
   let address = document.getElementById('address').value;
+  console.log(address)
   geocoder.geocode({
     'address': address
   }, function (results, status) {
@@ -82,7 +84,6 @@ function geocodeAddress(geocoder, resultsMap) {
         map: resultsMap,
         position: results[0].geometry.location
       });
-      console.log(resultsMap)
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }

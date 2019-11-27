@@ -62,3 +62,13 @@ router.get('/myPlans/:id', (req, res) => {
     .catch(err => console.log('error!!', err))
 })
   module.exports = router;
+
+router.get('/details/:id', (req, res) => {
+  const plansId = req.params.id
+  Plans.findById(plansId)
+    .then(plans => res.render('places/placeDetails', {
+      places: plans
+    }))
+    .catch(err => console.log("Error consultando la BBDD: ", err))
+});
+module.exports = router;
