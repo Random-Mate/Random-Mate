@@ -1,11 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+
 body {
 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color:#3498DB;}
+  }
 
 a {
   color: #00B7FF; }
+h1,h2,h3,h4{
+  font-family: 'Patua One'
 
+
+}
+.titleFont{
+font-family: 'Patua One'
+
+}
   .addMap {
     margin-top: 100px;
     width: 100%;
@@ -213,5 +223,21 @@ border:1px solid grey;
 
 }
 
-/* crear planes */
 
+/* video */
+#video_background {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 770px;
+  z-index: -1000;
+  overflow: hidden;
+}
+.op{
+  opacity: 0.8;
+}
+
+  /* crear planes */
