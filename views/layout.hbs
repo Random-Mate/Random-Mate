@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
+  <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/style.css" />
@@ -22,7 +23,7 @@
     </button>
   </nav> --}}
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/">Únete a planes , diviertete con gente nueva.</a>
+    <a class="navbar-brand titleFont" href="/">RandomMate</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -50,7 +51,7 @@
     </div> --}}
     <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
     {{#if user}}
-    <a href="/plans/myPlans/{{userID}}" class="nav-link">Planes</a>
+    <a href="/plans/myPlans/{{userID}}" class="nav-link">Mis Planes</a>
     <a href="/plans/{{userID}}" class="nav-link">Planes</a>
     <a href="/plans/join/{{userID}}" class="nav-link">Buscar Planes</a>
     <a href="/profile/{{userID}}" class="nav-link">Perfil</a>
