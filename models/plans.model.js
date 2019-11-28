@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 // Aquí el esquema
 const planSchema = new Schema({
   title:String,
-  atending: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  atending: [],
   author: { type: Schema.Types.ObjectId, ref: 'User' },
   plan:{
     type:String,

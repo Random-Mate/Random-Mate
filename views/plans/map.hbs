@@ -1,7 +1,14 @@
+
 <div>
-  <form action="/plans/map" method="post"></form>
+  <h1 style="font-weight: 100">{{map.title}}</h1>
+  <p><strong>fecha</strong>: {{map.date}}</p>
+  <p><strong>Planes</strong>: {{map.plan}}</p>
+  <p><strong>¿Cual es el plan?</strong>: {{map.title}}</p>
+  <p><strong>descripción del plan</strong>: {{map.description}}</p>
+  <p><strong>Cuantas personas van</strong>: {{people}}</p>
+  <form action="/plans/map" method="post">
 <input name="location" type="text" class="form-control" id="address" value="{{map.location}}">
-<input id="submit" type="button" value="Search in map">
+<input id="submit" type="button" value="Search in map"></form>
 </div>
 <figure id="map" class="addMap"></figure>
 <script src="/javascripts/main.js"></script>

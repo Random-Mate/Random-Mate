@@ -5,23 +5,23 @@
 
     <div class="col-md-6">
 
-      <form action="/plans/newPlan" method="post">
+      <form action="/plans/newPlan/{{userID}}" method="post">
         <h1>What do you want to do?</h1>
         <div class="form-group">
           <label for="title">Title</label>
           <input name="title" type="text" class="form-control" id="title">
         </div>
         <div class="form-group">
-        <select name="plan" class="form-control" id="plan">
-          <option value='bar'>Go to a Bar</option>
-          <option value='club'>Go to a Club</option>
-          <option value='cinema'>Go to the Movies</option>
-          <option value='coffee shop'>Go to a Cofee Shop</option>
-          <option value='play football'>Play a match of Football</option>
-          <option value='play basketball'>Play a match of Basketball</option>
-          <option value='play tennis'>Play a match of Tennis</option>
-          <option value='play padel'>Play a match of Padel</option>
-        </select>
+          <select name="plan" class="form-control" id="plan">
+            <option value='bar'>Go to a Bar</option>
+            <option value='club'>Go to a Club</option>
+            <option value='cinema'>Go to the Movies</option>
+            <option value='coffee shop'>Go to a Cofee Shop</option>
+            <option value='play football'>Play a match of Football</option>
+            <option value='play basketball'>Play a match of Basketball</option>
+            <option value='play tennis'>Play a match of Tennis</option>
+            <option value='play padel'>Play a match of Padel</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="date">When?</label>
@@ -31,14 +31,14 @@
           <label for="description">What do you have plane?</label>
           <input name="description" type="text" class="form-control" id="description">
         </div>
-      <div class="form-group">
-        <label for="address">Where do you want to meet?</label>
-        <input name="location" type="text" class="form-control" id="address">
-        <input id="submit" type="button" value="Search in map">
-      </div>
-            {{#if message }}
-            <div class="error-message">{{ message }}</div>
-            {{/if}}
+        <div class="form-group">
+          <label for="address">Where do you want to meet?</label>
+          <input name="location" type="text" class="form-control" id="address">
+          <input id="submit" type="button" value="Search in map">
+        </div>
+        {{#if message }}
+        <div class="error-message">{{ message }}</div>
+        {{/if}}
         <button type="submit" class="btn btn-dark">That's a Plan!!</button>
         <a href="/plans/" class="btn btn-dark">Volver</a>
 
@@ -46,12 +46,13 @@
     </div>
     <div class="col-md-6">
 
-        <figure id="map" class='addMap'></figure>
-        
+      <figure id="map" class='addMap'></figure>
+
 
     </div>
 
   </div>
 </div>
 <script src="/javascripts/main.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5QrzQLJtAltgspt1-ri6B04SFtB93v3s&callback=initMap"></script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5QrzQLJtAltgspt1-ri6B04SFtB93v3s&callback=initMap"></script>
