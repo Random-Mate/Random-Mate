@@ -119,9 +119,12 @@ router.get('/join/:id', (req, res) => {
 
 router.post('/join/:id', (req, res) => {
   const plan = req.body
+   let isLoggedOut = req.user === undefined;
   Plans.find(plan)
     .then(allMatches => res.render('plans/joinPlan', {
-      plans: allMatches
+      plans: allMatches, isLoggedOut,
+        userID: req.user._id,
+        user: req.user
     }))
     .catch(err => console.log(err))
 
