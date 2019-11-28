@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container plans-index">
   <a href="/" class="btn btn-dark">Volver</a>
   <a href="/plans/newPlan/{{user}}" class="btn btn-dark">Crear plan</a>
@@ -17,8 +18,37 @@
  {{!-- <form action="/plans/{{_id}}" method="post"> <button type="submit" class="btn btn-dark">Unirse al plan</button></form> --}}
   <a href="/plans/details/{{this._id}}" class="btn btn-dark">Ver Detalles</a>
 </div>
+=======
+<div class="backPlans">
+  <div class="container">
+    <div class="headerPlans">
+    <a href="/" class="btn btn-dark buttonsUpp">Volver</a>
+    <h2>Planes</h2>
+    <a href="/plans/newPlan/{{user}}" class="btn btn-dark buttonsUpp">Crear plan</a>
+    </div>
+  <div class="row">
+  {{#each plans}}
+  <div class="col-md-3 border ">
+    <h3 style="font-weight: 100">{{this.title}}</h3>
+    <hr>
+    <p><strong>fecha</strong>: {{this.date}}</p>
+    <p><strong>Planes</strong>: {{this.plan}}</p>
+    <p><strong>¿Cual es el plan?</strong>: {{this.title}}</p>
+    <p><strong>Detalles</strong>: {{this.details}}</p>
+    <p><strong>quien se une</strong>: {{this.atending}}</p>
+    <p><strong>descripción del plan</strong>: {{this.description}}</p>
+    <p><strong>location</strong>: {{this.location}}</p>
+    <div class="button-flex">
+      <a href="/plans/join" class="btn btn-dark">Unirse al plan</a>
+    </div>
+    <div class="button-flex">
+      <a href="/plans/details/{{this._id}}" class="btn btn-dark">Ver Ubicación</a>
+      </div>
+  </div>
+>>>>>>> Imanol
 
-  {{/each}}
+    {{/each}}
 
-</div>
+  </div>
+  </div>
 </div>

@@ -29,7 +29,7 @@ width: 300px;
 .login-screen {
 background-color: whitesmoke;
 padding: 20px;
-border-radius: 5px
+border-radius: 5px;
 }
 .signup-screen {
   padding-top: 15px;
@@ -52,7 +52,6 @@ margin-bottom: 0;
 
 input {
 margin:5px;
-text-align: center;
 background-color: #ECF0F1;
 border: 2px solid transparent;
 border-radius: 3px;
@@ -81,12 +80,15 @@ box-shadow: none;
   transition: 0.25s;
   display: block;
   width: 145px;
-  margin: 0 auto;
 }
 
 .btn:hover {
   background-color: whitesmoke;
   color: grey;
+}
+
+.btn-losign {
+  margin:auto;
 }
 input {
   background-color: none;
@@ -158,13 +160,12 @@ text-align: center;
 
 /* edit profile */
 
-.description{
-  padding: 40px;
-}
+
 .backProfile{
   background-image: url(/images/picnic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
   
 }
 .login-screenP {
@@ -172,5 +173,45 @@ padding: 10px;
 border-radius: 10px;
 opacity: 0.7;
 
+}
+
+.button-flex{
+  display:flex;
+  margin:55px;
+  text-shadow: 30px 30px 4px #000000;
+  margin-top: 30px;
+  padding-top: 10px;
 
 }
+
+/* planes */
+
+.headerPlans{
+  display:flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.border{
+  border-radius: 10px;
+border:1px solid grey;
+ display: flexbox;
+ align-items: center;
+ opacity: 0.9;
+ background:#8FFCF3;
+ font-size: 15px;
+ 
+}
+.backPlans{
+  background-image: url(/images/avatar.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.buttonsUpp{
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+
+/* crear planes */
+

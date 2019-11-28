@@ -1,48 +1,49 @@
-<div class="backProfile">
-  <div class="container">
-    <div class="row">
+  <div class="backProfile">
+    <div class="container">
+      <div class="row">
 
 
 
-      <div class="col-md-5 login-screenP ">
-        <h1 class="prof">Edit your profile</h1>
+        <div class="col-md-5 login-screenP ">
+          <h1 class="prof">Edit your profile</h1>
 
-        <form action="/profile/edit" method="POST" id="form-container" enctype="multipart/form-data">
-          {{#with prof}}
-          <div class='form-group'>
-            <label for='input2'>Profile picture</label>
-            <input name='imgPath' type='file' id='input2'>
+          <form action="/profile/edit" method="POST" id="form-container" enctype="multipart/form-data">
+            {{#with prof}}
+            <div class='form-group'>
+              <label for='input2'>Profile picture</label>
+              <input name='imgPath' type='file' id='input2'>
 
 
-            <div class="form-group">
-              <label for="name-input">Name:</label>
-              <input name="name" type="text" class="form-control" id="name-input" value="{{name}}">
+              <div class="form-group">
+                <label for="name-input">Name:</label>
+                <input name="name" type="text" class="form-control" id="name-input" value="{{name}}">
+              </div>
+              <div class="form-group">
+                <label for="name-input">Last Name:</label>
+                <input name="name" type="text" class="form-control" id="name-input" value="{{name}}">
+              </div>
+              <div class="form-group">
+                <label for="age-input">Age:</label>
+                <input name="age" type="number" class="form-control" id="age-input" value="{{age}}">
+              </div>
+              <div class="form-group description">
+                <label for="description-input">Description:</label>
+                <input name="description" type="text" class="form-control" id="description-input" value="{{description}}">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="name-input">Last Name:</label>
-              <input name="name" type="text" class="form-control" id="name-input" value="{{name}}">
-            </div>
-            <div class="form-group">
-              <label for="age-input">Age:</label>
-              <input name="age" type="number" class="form-control" id="age-input" value="{{age}}">
-            </div>
-            <div class="form-group description">
-              <label for="description-input">Description:</label>
-              <input name="description" type="text" class="form-control" id="description-input" value="{{description}}">
-            </div>
-          </div>
 
-          {{/with}}
-          {{!-- {{#each users}}
-        <option value="{{_id}}">{{name}}</option>
-        {{/each}}  --}}
-     
-        <button type="submit" class="btn btn-dark">Guardar</button>
-    
-        </form>
-          <a href="/profile" class="btn btn-dark">Volver</a>
+            {{/with}}
+            {{!-- {{#each users}}
+          <option value="{{_id}}">{{name}}</option>
+          {{/each}}  --}}
+          <div class="button-flex">
+          <button type="submit" class="btn btn-dark">Guardar</button>
+      
+          </form>
+            <a href="/profile" class="btn btn-dark">Volver</a>
+            </div>
+        </div>
+
       </div>
-
     </div>
-  </div>
-</div>
+    
