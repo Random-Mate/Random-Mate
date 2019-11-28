@@ -1,24 +1,34 @@
-<h2>Login</h2>
+<div class="login">
+  <div class="login-screen">
+    <div class="app-title">
+      <h1>Login</h1>
+    </div>
 
-<form action="/auth/login" method="POST" id="form-container">
-  <label for="email">Email</label>
-  <input id="email" type="email" name="email" placeholder="JonSnow">
 
-  <br><br>
 
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-  <br>
-  {{#if message }}
-  <div class="error-message">{{ message }}</div>
-  {{/if}}
+    <div class="login-form control-group">
+      <form action="/auth/login" method="POST" id="form-container">
+        <label for="email" class="nameLabel">Insert your email</label>
+        <input id="email" type="email" class="login-field" name="email" placeholder="email">
+    </div>
 
-  <br><br>
+    <div class="control-group login-form">
+      <label for="password" class="nameLabel">Insert your password</label>
+      <input id="password" type="password" class="login-field" name="password" placeholder="Your password">
+      {{#if message }}
+      <div class="error-message">{{ message }}</div>
+      {{/if}}
+    </div>
 
-  <button type="submit" class="btn btn-outline-info">Login</button>
 
-  <p class="account-message">
-    Don't have an account yet?
-    <a href="/auth/signup">Signup</a>
-  </p>
+
+    <button type="submit" class="btn btn-primary btn-large btn-block">Login</button>
+
+<p class="login-link">
+      Don't have an account yet?
+      <a href="/auth/signup">Signup</a>
+    </p>
+  </div>
+</div>
+</div>
 </form>

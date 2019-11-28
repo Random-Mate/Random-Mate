@@ -3,14 +3,27 @@
       {{#with profile}}
   <a href="/myPlans/{{_id}}/" class="btn btn-dark">Mis Planes</a>
 
-  <div class="row">
-    <div class="col-md-8">
-
+  <div class="containerGlobalProfile">
+    <div class="imgProfile">
       <img src="{{imgPath}}" alt="{{imgName}}" style="width: 100%">
-      <h2>{{name}}</h2>
-      <h3>{{age}}</h3>
-      <p>{{description}}</p><br>
+    </div>
+
+    <div class="infoProfile">
+      <h2 class="nameProfile">{{name}}</h2>
+      <hr>
+      <div class="aboutProfile">
+        <h3>About:</h3>
+        <p>{{description}}</p><br>
+      </div>
+      <hr>
+      <div class="ageProfile">
+        <img src="/images/calendar.png" class="iconProfile">
+        <h3>{{age}}</h3>
+      </div>
+      <hr>
       <a href="/profile/edit/{{_id}}">Edit Profile</a>
+    </div>
+  </div>
       {{/with}}
       <ul>
         {{#each comment}}

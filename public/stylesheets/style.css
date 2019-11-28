@@ -1,7 +1,7 @@
 body {
 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color:white;}
+  background-color:#3498DB;}
 
 a {
   color: #00B7FF; }
@@ -17,3 +17,160 @@ a {
     height: 300px;
   }
 /*# sourceMappingURL=style.css.map */
+
+
+/* Login */
+
+.login {
+margin: auto;
+margin-top: 80px;
+width: 300px;
+}
+.login-screen {
+background-color: whitesmoke;
+padding: 20px;
+border-radius: 5px
+}
+.signup-screen {
+  padding-top: 15px;
+  margin-top: -36px;
+}
+.nameLabel {
+  margin-bottom: 0;
+  margin-top: 5px;
+  margin-left: 8px;
+}
+
+.app-title {
+text-align: center;
+color:#3498DB;
+}
+
+.control-group {
+margin-bottom: 0;
+}
+
+input {
+margin:5px;
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border 1.5s;
+}
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+.btn {
+  background: rgb(12, 183, 196);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 145px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: whitesmoke;
+  color: grey;
+}
+input {
+  background-color: none;
+}
+
+
+.login-link {
+  font-size: 12px;
+  display: block;
+	margin-top: 12px;
+}
+
+/* sign up */
+
+.sign-up {
+margin: auto;
+margin-top: 80px;
+width: 500px;
+}
+h1{
+  margin-bottom: 30px;
+}
+.area-inputs {
+text-align: center;
+}
+.account-message {
+  text-align: center;
+}
+.labelWithInput {
+  display: flex ;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.boxInputs {
+  padding-left: 7em;
+
+}
+
+/*profile */
+.containerGlobalProfile {
+  background-color: #F1FBF8;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  border-radius: 25px;
+}
+.infoProfile {
+  border: 1px solid grey;
+  width: 50%;
+}
+.imgProfile {
+  width: 350px;
+  height: 343px;
+  border-radius: 5%;
+}
+.nameProfile {
+  font-size: 4em;
+  color: blue
+}
+.iconProfile {
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+}
+.ageProfile {
+  display: flex;
+  align-items: center;
+}
+
+/* edit profile */
+
+.description{
+  padding: 40px;
+}
+.backProfile{
+  background-image: url(/images/picnic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.login-screenP {
+padding: 10px;
+border-radius: 10px;
+opacity: 0.7;
+
+
+}
