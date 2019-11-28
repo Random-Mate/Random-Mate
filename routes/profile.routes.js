@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const Profile = require('../models/User.model')
-const User = require('../models/User.model')
 const multer = require('multer');
 const uploadCloud = require('../configs/cloudinary.config');
 
@@ -38,9 +37,9 @@ router.post('/edit', uploadCloud.single('imgPath'), (req, res) => {
   const imgPath = req.file.url
   const imgName = req.file.originalname
 
-  const profileId = req.params.profileId
+  const profileId = eq.user._id
   console.log(req.user._id)
-  Profile.findByIdAndUpdate(req.user._id, { name, age, description, imgPath, imgName }, { new: true })
+  Profile.findByIdAndUpdate(profileId, { name, age, description, imgPath, imgName }, { new: true })
     .then(user => {
       console.log(user)
       res.redirect('/profile')

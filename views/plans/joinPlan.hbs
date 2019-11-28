@@ -6,7 +6,7 @@
     <h2>Lets search for a plan</h2>
       <br>
 
-      <form action="/plans/join" method="post">
+      <form action="/plans/join/{{userID}}" method="post">
        
         <div class="form-group">
           <select name="plan" class="form-control" id="plan">
@@ -31,7 +31,7 @@
       <ul>
 
         {{#each plans}}
-          <li>{{this.title}}</li>
+          <li>{{this.title}} <a href="/plans/details/{{this._id}}" class="btn btn-dark">Ver Ubicación</a></li>
         {{/each}}
 
       </ul>
