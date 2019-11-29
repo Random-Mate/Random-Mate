@@ -1,14 +1,15 @@
+<div class="backCreate">
 <div class="container">
 
   <div class="row">
 
 
-    <div class="col-md-5 login-screenP ">
+    <div class="col-md-5 login-screenPl ">
 
       <form action="/plans/newPlan/{{userID}}" method="post">
         <h1>What do you want to do?</h1>
         <div class="form-group">
-          <label for="title">Title</label>
+          <strong><label for="title">Title</label></strong>
           <input name="title" type="text" class="form-control" id="title">
         </div>
         <div class="form-group">
@@ -24,24 +25,25 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="date">When?</label>
+          <strong><label for="date">When?</label></strong>
           <input name="date" type="date" class="form-control" id="date">
         </div>
         <div class="form-group">
-          <label for="description">What do you have plane?</label>
+          <strong><label for="description">What do you have plane?</label></strong>
           <input name="description" type="text" class="form-control" id="description">
         </div>
         <div class="form-group">
-          <label for="address">Where do you want to meet?</label>
+          <strong><label for="address">Where do you want to meet?</label></strong>
           <input name="location" type="text" class="form-control" id="address">
           <input id="submit" type="button" value="Search in map">
         </div>
         {{#if message }}
         <div class="error-message">{{ message }}</div>
         {{/if}}
+        <div class="button-flex">
         <button type="submit" class="btn btn-dark">That's a Plan!!</button>
         <a href="/plans/" class="btn btn-dark">Volver</a>
-
+        </div>
       </form>
     </div>
     <div class="col-md-6">
@@ -53,6 +55,6 @@
 
   </div>
 </div>
+</div>
 <script src="/javascripts/main.js"></script>
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5QrzQLJtAltgspt1-ri6B04SFtB93v3s&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5QrzQLJtAltgspt1-ri6B04SFtB93v3s&callback=initMap"></script>

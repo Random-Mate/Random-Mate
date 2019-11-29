@@ -8,9 +8,12 @@ body {
 a {
   color: #00B7FF; }
 h1,h2,h3,h4{
-  font-family: 'Patua One'
+  font-family: 'Patua One';
+  color: #3498DB;
 
-
+}
+.imgProf{
+  border-radius: 50%;
 }
 .titleFont{
 font-family: 'Patua One'
@@ -47,8 +50,9 @@ border-radius: 5px;
 }
 .nameLabel {
   margin-bottom: 0;
-  margin-top: 5px;
+  margin-top: 16px;
   margin-left: 8px;
+  color: #3498DB;
 }
 
 .app-title {
@@ -63,11 +67,11 @@ margin-bottom: 0;
 input {
 margin:5px;
 background-color: #ECF0F1;
-border: 2px solid transparent;
+border: .8px solid #3498DB;
 border-radius: 3px;
 font-size: 16px;
 font-weight: 200;
-padding: 10px 0;
+padding: 10px 0px 10px 5px;
 width: 250px;
 transition: border 1.5s;
 }
@@ -139,33 +143,40 @@ text-align: center;
 
 /*profile */
 .containerGlobalProfile {
-  background-color: #F1FBF8;
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  border-radius: 25px;
+  width: 60%;
+  margin-left: 0px;
 }
-.infoProfile {
-  border: 1px solid grey;
-  width: 50%;
-}
+
 .imgProfile {
   width: 350px;
   height: 343px;
-  border-radius: 5%;
+  border-radius: 50%;
 }
 .nameProfile {
-  font-size: 4em;
-  color: blue
+  font-size: 3.3em;
+  color: #3498DB;
 }
 .iconProfile {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   margin-right: 15px;
 }
 .ageProfile {
   display: flex;
   align-items: center;
+  margin:30px;
+}
+.buttonProf{
+  margin:40px;
+}
+.box-container {
+  display: flex;
+}
+.aboutProfile {
+  padding-bottom: 40px;
+}
+.iconFuck{
+  margin:10px;
 }
 
 /* edit profile */
@@ -241,3 +252,27 @@ border:1px solid grey;
 }
 
   /* crear planes */
+
+  .backCreate{
+  background-image: url(/images/people.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  }
+
+  .login-screenPl {
+background-color: whitesmoke;
+padding: 20px;
+border-radius: 5px;
+opacity:0.8
+  }
+
+  .backBasket{
+     background-image: url(/images/basket.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  }
+

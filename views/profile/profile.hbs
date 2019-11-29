@@ -1,41 +1,70 @@
-<div class="container">
-  <h1>Profile</h1>
-      {{#with profile}}
-  <a href="/plans/myPlans/{{_id}}/" class="btn btn-dark">Mis Planes</a>
+<div class="backBasket">
+  <div class="container">
+    <h1>Profile</h1>
+    {{#with profile}}
 
-  <div class="containerGlobalProfile">
-    <div class="imgProfile">
-      <img src="{{imgPath}}" alt="{{imgName}}" style="width: 100%">
-    </div>
+    <div class="containerGlobalProfile">
+      <div class="imgProfile">
+        <img class="imgProf" src="{{imgPath}}" alt="{{imgName}}" alt="{{lastName}}" style="width: 100%">
 
-    <div class="infoProfile">
-      <h2 class="nameProfile">{{name}}</h2>
-      <hr>
-      <div class="aboutProfile">
-        <h3>About:</h3>
-        <p>{{description}}</p><br>
       </div>
-      <hr>
-      <div class="ageProfile">
-        <img src="/images/calendar.png" class="iconProfile">
-        <h3>{{age}}</h3>
+
+         <div class="infoProfile">
+          <h2 class="nameProfile">{{name}}</h2>
+          <h2 class="nameProfile">{{lastName}}</h2>
+          <hr>
+        <div class="box-container">
+            <img src="/images/write-letter.png" class="iconProfile iconFuck">
+            <div class="aboutProfile">
+              <h3 class="abProfile">About : </h3>
+              <p>{{description}}</p><br>
+              <hr>
+            </div>
+        </div>
+            <div class="ageProfile">
+              <img src="/images/calendar.png" class="iconProfile">
+              <h3>Edad : {{age}}</h3>
+              <hr>
+            </div>
+        
+        <div class="ageProfile">
+          <img src="/images/email.png" class="iconProfile">
+          <h3>Email : {{email}}</h3>
+        <hr>
+        </div>
+        <div class="ageProfile">
+          <img src="/images/location.png" class="iconProfile">
+          <h3>Localicación : {{location}}</h3>
+          <hr>
+        </div>
+        <a href="/profile/edit/{{_id}}">Edit Profile</a>
       </div>
-      <hr>
-      <a href="/profile/edit/{{_id}}">Edit Profile</a>
     </div>
+    {{/with}}
+    <ul>
+      {{#each comment}}
+      <li>{{this.name}}
+        {{this.rating}}/5
+        {{this.comentary}}
+      </li>
+      {{/each}}
+      
+    <a href="/plans/myPlans/{{_id}}/" class="btn btn-dark buttonProf">Ver Mis Planes</a>
+    
+    </ul>
   </div>
-      {{/with}}
-      <ul>
-        {{#each comment}}
-        <li>{{this.name}}
-          {{this.rating}}/5
-          {{this.comentary}}
-        </li>
-        {{/each}}
-      </ul>
-    </div>
-    {{!-- {{else}}
+  {{!-- {{else}}
     <p>no image could be found</p> --}}
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+ </div>
 
-  </div>
-</div>
+ </div>

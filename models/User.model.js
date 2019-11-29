@@ -2,21 +2,23 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
- 
-name:String,
-age:	Number	,
-email:	String	,
-password:String	,
-imgName: String,
-imgPath: String,
-plans: [{ type: Schema.Types.ObjectId, ref: 'Plan' }]	,
-description:	String	,
-activities:	{
-  type:String,
-  enum:['bar','club','cinema','coffe shop','play football','play basketball','play tennis' ,'play padel']
-},
-comments:{type: Schema.Types.ObjectId, ref: 'Comment' }	,
-             
+
+  name: String,
+  lastName: String,
+  age: Number,
+  email: String,
+  ubication: String,
+  password: String,
+  imgName: String,
+  imgPath: String,
+  plans: [{ type: Schema.Types.ObjectId, ref: 'Plan' }],
+  description: String,
+  activities: {
+    type: String,
+    enum: ['bar', 'club', 'cinema', 'coffe shop', 'play football', 'play basketball', 'play tennis', 'play padel']
+  },
+  comments: { type: Schema.Types.ObjectId, ref: 'Comment' },
+
 }, {
   timestamps: {
     createdAt: 'created_at',
