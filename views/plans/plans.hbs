@@ -2,14 +2,14 @@
 <div class="backPlans">
   <div class="container">
     <div class="headerPlans">
-    <a href="/" class="btn btn-dark buttonsUpp">Volver</a>
+    <a href="/" class="btn  buttonsUpp">Volver</a>
     <h2>Planes</h2>
-    <a href="/plans/newPlan/{{user}}" class="btn btn-dark buttonsUpp">Crear plan</a>
+    <a href="/plans/newPlan/{{user}}" class="btn  buttonsUpp">Crear plan</a>
     </div>
-  <div class="row">
+  <div class="row colum">
   {{#each plans}}
-  <div class="col-md-3 border ">
-    <h3 style="font-weight: 100">{{this.title}}</h3>
+  <div class="col-md-5 border ">
+    <h3 style="margin-top: 10px">{{this.title}}</h3>
     <hr>
     <p><strong>fecha</strong>: {{this.date}}</p>
     <p><strong>Plan</strong>: {{this.plan}}</p>
@@ -17,11 +17,9 @@
     <p><strong>Detalles</strong>: {{this.details}}</p>
     <p><strong>descripción del plan</strong>: {{this.description}}</p>
     <p><strong>location</strong>: {{this.location}}</p>
-    <div class="button-flex">
-      <a href="/plans/{{_id}}" class="btn btn-dark">Unirse al plan</a>
-    </div>
-    <div class="button-flex">
-      <a href="/plans/details/{{this._id}}" class="btn btn-dark">Ver Ubicación</a>
+    <div class="colum marg">
+      <a href="/plans/{{_id}}" class="btn ">Unirse al plan</a>
+      <a href="/plans/details/{{this._id}}" class="btn ">Ver Ubicación</a>
       </div>
   </div>
 

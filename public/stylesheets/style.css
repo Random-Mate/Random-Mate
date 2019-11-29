@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind+Guntur|Patua+One&display=swap');
 
 body {
 
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px ;
+  font-family: 'Hind Guntur'
   }
 
 a {
@@ -37,7 +38,7 @@ margin-top: 80px;
 width: 300px;
 }
 .login-screen {
-background-color: whitesmoke;
+background-color: #F1FBF8;
 padding: 20px;
 border-radius: 5px;
 }
@@ -90,6 +91,19 @@ box-shadow: none;
   transition: 0.25s;
   display: block;
   width: 145px;
+}
+.btnJoin {
+  background: rgb(12, 183, 196);
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 10px 0;
+  width: 130px;
+}
+.btnInJ{
+display: flex;
+justify-content: space-between;
+margin-top: 49px;
 }
 
 .btn:hover {
@@ -178,6 +192,13 @@ text-align: center;
   height: 100vh;
   
 }
+.backJoin {
+  background-image: url(/images/friends.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+}
 .login-screenP {
 padding: 10px;
 border-radius: 10px;
@@ -204,15 +225,21 @@ opacity: 0.7;
 .border{
   border-radius: 10px;
 border:1px solid grey;
- display: flexbox;
+ justify-content: space-between;
  align-items: center;
+height: 459px;
  opacity: 0.9;
- background:#8FFCF3;
+ background:#F1FBF8;
  font-size: 15px;
+margin-bottom: 40px;
  
 }
+.colum{
+  display: flex;
+  justify-content: space-between;
+}
 .backPlans{
-  background-image: url(/images/avatar.png);
+  background-image: url(/images/surf.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -229,8 +256,8 @@ border:1px solid grey;
   position: absolute;
   bottom: 0px;
   right: 0px;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   width: auto;
   height: 770px;
   z-index: -1000;
@@ -239,5 +266,18 @@ border:1px solid grey;
 .op{
   opacity: 0.8;
 }
+.centerT{
+  border-radius: 25px;
+  margin-top: 200px;
+  background-color: #F1FBF8;
+   height: 287px;
+}
+.textAli{
+  text-align: center;
+}
+.marg{
+  margin-top: 39px;
+}
+
 
   /* crear planes */
