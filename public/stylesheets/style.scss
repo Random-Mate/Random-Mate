@@ -1,79 +1,96 @@
-// body {
-//   padding: 50px;
-//   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-//   background-color:red;
-// }
+@import url('https://fonts.googleapis.com/css?family=Hind+Guntur|Patua+One&display=swap');
 
-// a {
-//   color: #00B7FF;
-// }
-// #map{
-//   width: 100%;
-//   height: 400px;
-// }
-// /* signup */
 body {
 
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color:#3498DB;}
+  font: 14px;
+  font-family: 'Hind Guntur'
+}
 
 a {
-  color: #00B7FF; }
+  color: #00B7FF;
+}
 
-  .addMap {
-    margin-top: 100px;
-    width: 100%;
-    height: 400px;
-  }
-  .planMap {
-    margin-top: 50px;
-    width: 100%;
-    height: 300px;
-  }
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Patua One'
+
+
+}
+
+.titleFont {
+  font-family: 'Patua One'
+
+}
+
+.addMap {
+  margin-top: 100px;
+  width: 100%;
+  height: 400px;
+}
+
+.planMap {
+  margin-top: 50px;
+  width: 100%;
+  height: 300px;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 
 /* Login */
 
 .login {
-margin: auto;
-margin-top: 80px;
-width: 300px;
+  margin: auto;
+  margin-top: 80px;
+  width: 300px;
 }
+
 .login-screen {
-background-color: whitesmoke;
-padding: 20px;
-border-radius: 5px
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.signup-screen {
+  padding-top: 15px;
+  margin-top: -36px;
+}
+
+.nameLabel {
+  margin-bottom: 0;
+  margin-top: 5px;
+  margin-left: 8px;
 }
 
 .app-title {
-text-align: center;
-color:#3498DB;
+  text-align: center;
+  color: #3498DB;
 }
 
 .control-group {
-margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 input {
-text-align: center;
-background-color: #ECF0F1;
-border: 2px solid transparent;
-border-radius: 3px;
-font-size: 16px;
-font-weight: 200;
-padding: 10px 0;
-width: 250px;
-transition: border 1.5s;
+  margin: 5px;
+  background-color: #ECF0F1;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 250px;
+  transition: border 1.5s;
 }
 
 input:focus {
-border: 2px solid #3498DB;
-box-shadow: none;
+  border: 2px solid #3498DB;
+  box-shadow: none;
 }
 
 .btn {
-  border: 2px solid transparent;
   background: rgb(12, 183, 196);
   color: #ffffff;
   font-size: 16px;
@@ -85,45 +102,189 @@ box-shadow: none;
   box-shadow: none;
   transition: 0.25s;
   display: block;
-  width: 250px;
-  margin: 0 auto;
+  width: 145px;
 }
 
 .btn:hover {
   background-color: whitesmoke;
+  color: grey;
 }
+
+.btn-losign {
+  margin: auto;
+}
+
+input {
+  background-color: none;
+}
+
 
 .login-link {
   font-size: 12px;
-  color:rgb(12, 183, 196);
   display: block;
-	margin-top: 12px;
+  margin-top: 12px;
 }
 
 /* sign up */
 
 .sign-up {
-margin: auto;
-margin-top: 80px;
-width: 500px;
+  margin: auto;
+  margin-top: 80px;
+  width: 500px;
 }
-h1{
+
+h1 {
   margin-bottom: 30px;
 }
+
 .area-inputs {
-text-align: center;
+  text-align: center;
 }
+
 .account-message {
   text-align: center;
 }
 
 .labelWithInput {
-  display: flex ;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .boxInputs {
   padding-left: 7em;
 
 }
 
+/*profile */
+.containerGlobalProfile {
+  background-color: #F1FBF8;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  border-radius: 25px;
+}
+
+.infoProfile {
+  border: 1px solid grey;
+  width: 50%;
+}
+
+.imgProfile {
+  width: 350px;
+  height: 343px;
+  border-radius: 5%;
+}
+
+.nameProfile {
+  font-size: 4em;
+  color: blue
+}
+
+.iconProfile {
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+}
+
+.ageProfile {
+  display: flex;
+  align-items: center;
+}
+
+/* edit profile */
+
+
+.backProfile {
+  background-image: url(/images/picnic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+}
+
+.backJoin {
+  background-image: url(/images/friends.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+}
+
+.login-screenP {
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0.7;
+
+}
+
+.button-flex {
+  display: flex;
+  margin: 55px;
+  text-shadow: 30px 30px 4px #000000;
+  margin-top: 30px;
+  padding-top: 10px;
+
+}
+
+/* planes */
+
+.headerPlans {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.border {
+  border-radius: 10px;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  background: #F1FBF8;
+  font-size: 15px;
+
+}
+
+.backPlans {
+  background-image: url(/images/avatar.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.buttonsUpp {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+
+
+/* video */
+#video_background {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: 770px;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+.op {
+  opacity: 0.8;
+}
+
+.centerT {
+  border-radius: 25px;
+  margin-top: 200px;
+  background-color: grey;
+}
+
+.textAli {
+  text-align: center;
+}
+
+/* crear planes */

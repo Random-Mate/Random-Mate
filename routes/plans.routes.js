@@ -34,7 +34,6 @@ router.post('/:id', (req, res) => {
         _id: details._id,
         name: details.name
       }
-      console.log(details)
 
 
       Plans.findById(planId)
