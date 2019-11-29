@@ -186,6 +186,9 @@ h1 {
   width: 350px;
   height: 343px;
   border-radius: 50%;
+  display:flex;
+  margin:0 auto;
+
 }
 
 .nameProfile {
@@ -239,7 +242,7 @@ h1 {
   background-image: url(/images/picnic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  
 
 }
 
