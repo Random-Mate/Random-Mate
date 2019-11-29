@@ -401,6 +401,9 @@ h1 {
 .align {
   justify-content: space-evenly;
 }
+.aligne {
+  justify-content: space-between;
+}
 
 /* mis planes */
 

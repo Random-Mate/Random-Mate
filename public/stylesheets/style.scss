@@ -7,16 +7,20 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #F1FBF8;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'Patua One'
+  font-family: 'Patua One';
+  color: #3498DB;
 
+}
 
+.imgProf {
+  border-radius: 50%;
 }
 
 .titleFont {
@@ -48,7 +52,7 @@ h4 {
 }
 
 .login-screen {
-  background-color: whitesmoke;
+  background-color: #F1FBF8;
   padding: 20px;
   border-radius: 5px;
 }
@@ -60,8 +64,9 @@ h4 {
 
 .nameLabel {
   margin-bottom: 0;
-  margin-top: 5px;
+  margin-top: 16px;
   margin-left: 8px;
+  color: #3498DB;
 }
 
 .app-title {
@@ -76,11 +81,11 @@ h4 {
 input {
   margin: 5px;
   background-color: #ECF0F1;
-  border: 2px solid transparent;
+  border: .8px solid #3498DB;
   border-radius: 3px;
   font-size: 16px;
   font-weight: 200;
-  padding: 10px 0;
+  padding: 10px 0px 10px 5px;
   width: 250px;
   transition: border 1.5s;
 }
@@ -103,6 +108,21 @@ input:focus {
   transition: 0.25s;
   display: block;
   width: 145px;
+}
+
+.btnJoin {
+  background: rgb(12, 183, 196);
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 10px 0;
+  width: 130px;
+}
+
+.btnInJ {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 49px;
 }
 
 .btn:hover {
@@ -158,38 +178,60 @@ h1 {
 
 /*profile */
 .containerGlobalProfile {
-  background-color: #F1FBF8;
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  border-radius: 25px;
-}
-
-.infoProfile {
-  border: 1px solid grey;
-  width: 50%;
+  width: 60%;
+  margin-left: 0px;
 }
 
 .imgProfile {
   width: 350px;
   height: 343px;
-  border-radius: 5%;
+  border-radius: 50%;
 }
 
 .nameProfile {
-  font-size: 4em;
-  color: blue
+  font-size: 3.3em;
+  color: #3498DB;
 }
 
 .iconProfile {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   margin-right: 15px;
 }
 
 .ageProfile {
   display: flex;
   align-items: center;
+  margin: 30px;
+}
+
+.buttonProf {
+  margin: 40px;
+}
+
+.box-container {
+  display: flex;
+}
+
+.iconFuck {
+  margin: 10px;
+}
+
+.btnPr {
+  background: rgb(12, 183, 196);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  padding: 10px;
+  justify-content: space-between;
+  margin: 10px;
+  margin-bottom: 10px;
+
 }
 
 /* edit profile */
@@ -197,6 +239,23 @@ h1 {
 
 .backProfile {
   background-image: url(/images/picnic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+.backSignup {
+  background-image: url(/images/cafeteria.jpg);
+  background-repeat: no-repeat;
+  margin-top: -80px;
+  background-size: cover;
+
+
+}
+
+.backIndex {
+  background-image: url(/images/concert.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -238,16 +297,23 @@ h1 {
 .border {
   border-radius: 10px;
   border: 1px solid grey;
-  display: flex;
+  justify-content: space-between;
   align-items: center;
+  height: 459px;
   opacity: 0.9;
   background: #F1FBF8;
   font-size: 15px;
+  margin-bottom: 40px;
 
 }
 
+.colum {
+  display: flex;
+  justify-content: space-between;
+}
+
 .backPlans {
-  background-image: url(/images/avatar.png);
+  background-image: url(/images/surf.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -256,6 +322,14 @@ h1 {
 .buttonsUpp {
   margin-top: 30px;
   margin-bottom: 30px;
+
+}
+
+.backMyPlan {
+  background-image: url(/images/plans.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
 
@@ -280,11 +354,114 @@ h1 {
 .centerT {
   border-radius: 25px;
   margin-top: 200px;
-  background-color: grey;
+  background-color: #F1FBF8;
+  height: 287px;
 }
 
 .textAli {
   text-align: center;
 }
 
+.marg {
+  margin-top: 39px;
+}
+
+
 /* crear planes */
+
+.backCreate {
+  background-image: url(/images/people.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.login-screenPl {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: 0.8
+}
+
+.backBasket {
+  background-image: url(/images/basket.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.nav {
+  z-index: 1000;
+  background-color: rgb(12, 183, 196) ! important;
+  color: #F1FBF8 ! important;
+}
+
+.align {
+  justify-content: space-evenly;
+}
+
+.aligne {
+  justify-content: space-between;
+}
+
+/* mis planes */
+
+.borderMyPlan {
+  border-radius: 10px;
+  border: 1px solid grey;
+  justify-content: space-between;
+  opacity: 0.9;
+  background: #F1FBF8;
+  font-size: 15px;
+  margin-bottom: 40px;
+  width: 500px;
+  margin-top: 25px;
+  padding: 20px;
+}
+
+.backMap {
+  background-image: url(/images/mapita.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.colorFont {
+  background-color: whitesmoke;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.barra {
+  width: 30%;
+}
+
+.btnMap {
+  background: rgb(12, 183, 196);
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 10px 0;
+  width: 130px;
+  margin: 8px;
+}
+
+.indexT {
+  color: rgb(12, 183, 196);
+  text-align: center;
+  padding-top: 100px;
+  font-size: 100px;
+  -webkit-text-stroke: 0.25px black;
+}
+
+.indexP {
+  color: #222;
+  font-size: 30px;
+
+}
+
+.blue {
+  color: rgb(12, 183, 196);
+}
