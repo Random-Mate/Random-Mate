@@ -1,10 +1,12 @@
-<div class="container plans-index">
-  <a href="/" class="btn btn-dark">Volver</a>
+<div class="backMyPlan">
+<div class="container plans-index ">
+  <br><br>
+  <a href="/" class="btn">Volver</a>
   
 
   {{#each plan}}
-
-  <h1 style="font-weight: 100">{{this.title}}</h1>
+<div class="borderMyPlan">
+  <h1 style="font-weight: 100">{{this.title}}</h1><hr>
   <p><strong>fecha</strong>: {{this.date}}</p>
   <p><strong>Planes</strong>: {{this.plan}}</p>
   <p><strong>¿Cual es el plan?</strong>: {{this.title}}</p>
@@ -14,6 +16,15 @@
   <hr>
 
   
+</div>
   {{/each}}
-
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </div>

@@ -186,11 +186,24 @@ text-align: center;
 .box-container {
   display: flex;
 }
-.aboutProfile {
-  padding-bottom: 40px;
-}
 .iconFuck{
   margin:10px;
+}
+.btnPr{
+  background: rgb(12, 183, 196);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  padding:10px;
+  justify-content: space-between;
+  margin:10px;
+  margin-bottom: 10px;
+
 }
 
 /* edit profile */
@@ -260,6 +273,13 @@ margin-bottom: 40px;
   margin-bottom: 30px;
 
 }
+.backMyPlan{
+    background-image: url(/images/plans.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
 
 
 /* video */
@@ -316,3 +336,41 @@ opacity:0.8
 
   }
 
+/* mis planes */
+
+.borderMyPlan{
+border-radius: 10px;
+border:1px solid grey;
+ justify-content: space-between;
+ opacity: 0.9;
+ background:#F1FBF8;
+ font-size: 15px;
+margin-bottom: 40px;
+width: 500px;
+margin-top: 25px;
+padding:20px;
+}
+.backMap{
+   background-image: url(/images/mapita.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.colorFont{
+  background-color: whitesmoke;
+  border-radius: 25px;
+  padding:10px;
+}
+.barra{
+  width: 30%;
+}
+
+.btnMap{
+background: rgb(12, 183, 196);
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 10px 0;
+  width: 130px;
+  margin:8px;
+}

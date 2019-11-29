@@ -1,14 +1,16 @@
 <div class="backBasket">
+  
   <div class="container">
+    <br><br>
     <h1>Profile</h1>
     {{#with profile}}
 
     <div class="containerGlobalProfile">
       <div class="imgProfile">
         <img class="imgProf" src="{{imgPath}}" alt="{{imgName}}" alt="{{lastName}}" style="width: 100%">
-
+        
       </div>
-
+          <br><br>
          <div class="infoProfile">
           <h2 class="nameProfile">{{name}}</h2>
           <h2 class="nameProfile">{{lastName}}</h2>
@@ -16,7 +18,7 @@
         <div class="box-container">
             <img src="/images/write-letter.png" class="iconProfile iconFuck">
             <div class="aboutProfile">
-              <h3 class="abProfile">About : </h3>
+              <h3>About : </h3>
               <p>{{description}}</p><br>
               <hr>
             </div>
@@ -37,12 +39,14 @@
           <h3>Localicación : {{location}}</h3>
           <hr>
         </div>
-        <a href="/profile/edit/{{_id}}">Edit Profile</a>
+
       </div>
     </div>
-    
-      
-    <a href="/plans/myPlans/{{_id}}" class="btn btn-dark buttonProf">Ver Mis Planes</a>
+        <br><br>
+        <div>
+         <a class="btnPr" href="/profile/edit/{{_id}}">Edit Profile</a>
+         <a class="btnPr" href="/plans/myPlans/{{_id}}" class="btn buttonProf">Ver Mis Planes</a>
+        </div>
     
     {{/with}}
     
