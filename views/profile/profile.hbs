@@ -40,18 +40,12 @@
         <a href="/profile/edit/{{_id}}">Edit Profile</a>
       </div>
     </div>
-    {{/with}}
-    <ul>
-      {{#each comment}}
-      <li>{{this.name}}
-        {{this.rating}}/5
-        {{this.comentary}}
-      </li>
-      {{/each}}
-      
-    <a href="/plans/myPlans/{{_id}}/" class="btn btn-dark buttonProf">Ver Mis Planes</a>
     
-    </ul>
+      
+    <a href="/plans/myPlans/{{_id}}" class="btn btn-dark buttonProf">Ver Mis Planes</a>
+    
+    {{/with}}
+    
   </div>
   {{!-- {{else}}
     <p>no image could be found</p> --}}
