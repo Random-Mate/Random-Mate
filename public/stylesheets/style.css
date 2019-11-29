@@ -239,7 +239,7 @@ h1 {
   background-image: url(/images/picnic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  
 
 }
 
@@ -397,6 +397,9 @@ h1 {
 
 .align {
   justify-content: space-evenly;
+}
+.aligne {
+  justify-content: space-between;
 }
 
 /* mis planes */
