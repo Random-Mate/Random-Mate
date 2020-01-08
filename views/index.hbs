@@ -5,10 +5,12 @@
 
       <div class="col-md-8">
         <p class="indexP textAli">Una forma diferente para explorar y divertirte con gente nueva </p>
+        {{#if user}}
         <div class="btnInJ align">
-          <a href="/plans/{{userID}}" class="btn buttonsUpp">Planes</a>
-          <a href="/plans/newPlan/{{userID}}" class="btn buttonsUpp">Crear plan</a>
+          <a href="/plans/{{user._id}}" class="btn buttonsUpp">Planes</a>
+          <a href="/plans/newPlan/{{user._id}}" class="btn buttonsUpp">Crear plan</a>
         </div>
+        {{/if}}
       </div>
     </div>
   </div>

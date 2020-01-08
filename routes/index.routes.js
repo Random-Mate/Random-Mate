@@ -4,7 +4,7 @@ const router = express.Router();
 /* GET home page */
 router.get('/', (req, res, next) => {
   let isLoggedOut = req.user === undefined;
-  res.render('index', { isLoggedOut, userID: req.user._id, user: req.user });
+  res.render('index', { isLoggedOut,  user: req.user });
 });
 
 module.exports = router;
