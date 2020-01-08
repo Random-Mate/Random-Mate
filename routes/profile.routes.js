@@ -37,7 +37,7 @@ router.post('/edit', uploadCloud.single('imgPath'), (req, res) => {
   const imgPath = req.file.url
   const imgName = req.file.originalname
 
-  const profileId = eq.user._id
+  const profileId = req.user._id
   console.log(req.user._id)
   Profile.findByIdAndUpdate(profileId, { name, lastName, age, description, imgPath, imgName , email , ubication  }, { new: true })
     .then(user => {
